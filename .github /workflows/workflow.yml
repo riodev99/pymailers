@@ -2,8 +2,10 @@ name: Publish Python Package
 
 on:
   release:
-    types: [created]
-
+    types:
+      - created
+    workflows:
+      - release666
 jobs:
   deploy:
     runs-on: ubuntu-latest
