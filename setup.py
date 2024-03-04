@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='pymailers',
-    version='1.2.1',
+    version='1.2.2',
     description='An email sending library for Python with support for HTML content and attachments.',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -15,7 +15,7 @@ setup(
     project_urls={
         'Source': 'https://github.com/riodev99/pymailersexpanded',  # The "Source" label URL pointing to GitHub repo
     },
-    packages=['pymailersexpanded'],
+    packages=['pymailers'],
     install_requires=[
         'jinja2>=2.11.3',  # Specify the minimum version of jinja2 required
     ],
