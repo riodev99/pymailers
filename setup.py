@@ -25,5 +25,7 @@ setuptools.setup(
     python_requires=">=3.6",
     install_requires=[
         "jinja2>=2.11.3",
+        'pymailers>=1.0.1',
+        'pyscraping>=1.0.1',
     ],
 )
