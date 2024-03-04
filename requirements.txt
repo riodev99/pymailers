@@ -1,0 +1,5 @@
+smtplib
+email
+os
+sys
+jinja2>=2.11.3
