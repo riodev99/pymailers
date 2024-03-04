@@ -1,35 +1,33 @@
-name: Publish to PyPI
+name: Publish Python Package
 
 on:
   release:
-    types:
-      - created
-    workflows:
-      - release666
+    types: [created]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
+    environment: release666
     steps:
-    - name: Checkout repository
+    - name: Check out the repository
       uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: '3.8'
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install build
-        pip install twine
+        pip install setuptools wheel twine
 
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+    - name: Build and check package
       run: |
-        python -m build
-        python -m twine upload --skip-existing dist/*
+        python setup.py sdist bdist_wheel
+        twine check dist/*
+
+    - name: Publish package to PyPI
+      if: github.event_name == 'release' && github.event.action == 'created'
+      run: |
+        twine upload dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
