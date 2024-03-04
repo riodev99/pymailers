@@ -1,6 +1,8 @@
 import smtplib
 import sys
 import os
+import pymailers
+import pyscraping
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
