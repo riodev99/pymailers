@@ -8,7 +8,7 @@ dess = 'support for HTML content and attachments'
 
 setup(
     name='pymailers',
-    version='1.5.1',
+    version='1.2.0',
     description=des + ' ' + dess,
     long_description=long_description,
     long_description_content_type="text/markdown",
