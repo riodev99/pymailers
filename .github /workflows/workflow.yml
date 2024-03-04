@@ -5,11 +5,11 @@ on:
     types:
       - created
     workflows:
-      - release666
+      - release777
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: release666
+    environment: release777
     steps:
     - name: Check out the repository
       uses: actions/checkout@v2
