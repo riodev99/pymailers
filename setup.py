@@ -1,39 +1,29 @@
-from setuptools import setup
+import setuptools
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-des = 'An email sending library for Python with'
-dess = 'support for HTML content and attachments'
-
-setup(
-    name='pymailers',
-    version='1.2.1',
-    description=des + ' ' + dess,
+setuptools.setup(
+    name="pymailers",
+    version="1.2.1",  # Update the version number
+    author="riodev99",
+    description="The classic email sending library for Python was expanded to include more useful features",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author='riodev99',
     author_email='jgeniya1994@gmail.com',
     url='https://github.com/riodev99/pymailers', 
     project_urls={
         'Source': 'https://github.com/riodev99/pymailers',  # The "Source" label URL pointing to GitHub repo
     },
-    packages=['pymailers'],
+    package_dir={"": "pymailers"},
+    packages=setuptools.find_packages(where="pymailers"),
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires=">=3.6",
     install_requires=[
-      "requests",
-      "bs4"
+        "jinja2>=2.11.3",
     ],
 )
