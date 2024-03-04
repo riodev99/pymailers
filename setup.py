@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pymailers",
-    version="1.2.1",  # Update the version number
+    version="2.0.0",  # Update the version number
     author="riodev99",
     description="The classic email sending library for Python was expanded to include more useful features",
     long_description=long_description,
