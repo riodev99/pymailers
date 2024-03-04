@@ -8,15 +8,15 @@ dess = 'support for HTML content and attachments'
 
 setup(
     name='pymailers',
-    version='1.2.0',
+    version='1.2.1',
     description=des + ' ' + dess,
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='riodev99',
     author_email='jgeniya1994@gmail.com',
-    url='https://github.com/riodev99/pymailersexpanded', 
+    url='https://github.com/riodev99/pymailers', 
     project_urls={
-        'Source': 'https://github.com/riodev99/pymailersexpanded',  # The "Source" label URL pointing to GitHub repo
+        'Source': 'https://github.com/riodev99/pymailers',  # The "Source" label URL pointing to GitHub repo
     },
     packages=['pymailers'],
     classifiers=[
