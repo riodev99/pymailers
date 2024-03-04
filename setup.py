@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='pymailers',
-    version='1.2.3',
+    version='1.2.4',
     description='An email sending library for Python with support for HTML content and attachments.',
     long_description=long_description,
     long_description_content_type="text/markdown",
